@@ -12,3 +12,13 @@ sql = "select name, age from test where name=(%s)" # extracting the wanted infor
 cursor.execute(sql,('hello')) # executing the code with the data tag hello for the name
 student_info = cursor.fetchall() # inputing the data fetched by the cursor into a variable 'student_info'
 print(student_info) # printing the inputed data from 'student_info'
+
+delay(1000)
+
+sql = "delete from test where name=(%s)" # making a function for deleting the inserted data
+cursor.execute =(sql,('hello')) # executing the function
+
+sql = "select name, age from test where name=(%s)" # extracting the wanted information
+cursor.execute(sql,('hello')) # executing the code with the data tag hello for the name
+student_info = cursor.fetchall() # inputing the data fetched by the cursor into a variable 'student_info'
+print(student_info) # printing the inputed data from 'student_info' whether to check the deletion was successful
