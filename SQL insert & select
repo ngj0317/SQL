@@ -1,0 +1,12 @@
+import pymysql
+coala_db = pymysql.connect(host='hagalsa.cafe24.com', user='hagalsa', password='son2020^^', db='hagalsa', charset='utf8')
+cursor = coala_db.cursor(pymysql.cursors.DictCursor)
+sql = "insert into test (name, age) values (%s, %s)"
+cursor.execute(sql, ('hello', '1234'))
+
+coala_db.commit()
+
+sql = "select name, age from test where name=(%s)"
+cursor.execute(sql,('hello'))
+student_info = cursor.fetchall()
+print(student_info)
