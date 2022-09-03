@@ -1,10 +1,10 @@
 import pymysql
 
-coala_db = pymysql.connect(host='hagalsa.cafe24.com', 
-                           user='hagalsa', 
-                           password='son2020^^', 
-                           db='hagalsa', 
-                           charset='utf8') 
+coala_db = pymysql.connect(host='hagalsa.cafe24.com', # write the ip address of the server
+                           user='hagalsa', # write the username of the db you are trying to connect with
+                           password='son2020^^', # write the password of that user
+                           db='hagalsa', # write the db name which you are trying to access to
+                           charset='utf8') # the characterset of the db
 # connecting to the server
 
 
